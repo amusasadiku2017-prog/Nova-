@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOVA+ | Stream Unlimited</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">NOVA<span>+</span></div>
+
+    <nav>
+        <a href="#" onclick="showHome()">Home</a>
+        <a href="#trending">Trending</a>
+        <a href="#movies">Movies</a>
+        <a href="#series">Series</a>
+    </nav>
+
+    <div class="header-right">
+        <input type="search" id="search" placeholder="Search movies..." oninput="searchMovies()">
+        <button id="accountBtn" onclick="showAccount()">Sign In</button>
+    </div>
+</header>
+
+<main id="home">
+
+<section class="hero" id="hero">
+    <div class="hero-content">
+        <span class="badge">NOVA+ ORIGINAL</span>
+        <h1>YOUR NEXT<br>FAVOURITE MOVIE.</h1>
+        <p>Discover amazing movies, stories and entertainment.</p>
+        <button onclick="playFeatured()">▶ Watch Now</button>
+        <button class="secondary" onclick="showFeatured()">More Info</button>
+    </div>
+</section>
+
+<section class="category" id="trending">
+    <h2>🔥 Trending Now</h2>
+    <div class="movie-row" id="trendingMovies"></div>
+</section>
+
+<section class="category" id="movies">
+    <h2>🎬 Popular Movies</h2>
+    <div class="movie-row" id="popularMovies"></div>
+</section>
+
+<section class="category">
+    <h2>🇳🇬 African Cinema</h2>
+    <div class="movie-row" id="africanMovies"></div>
+</section>
+
+<section class="category" id="series">
+    <h2>📺 Series & Animation</h2>
+    <div class="movie-row" id="seriesMovies"></div>
+</section>
+
+<section class="category">
+    <h2>▶ Continue Watching</h2>
+    <div class="movie-row" id="continueMovies"></div>
+</section>
+
+</main>
+
+<section id="accountPage" class="hidden">
+    <div class="account-box">
+        <h1 id="accountTitle">Welcome to NOVA+</h1>
+        <p id="accountMessage">Sign in to your account.</p>
+
+        <input id="username" placeholder="Username" autocomplete="username">
+        <input id="email" type="email" placeholder="Email address">
+        <input id="password" type="password" placeholder="Password" autocomplete="current-password">
+
+        <button onclick="submitAccount()" id="submitBtn">Sign In</button>
+
+        <p id="switchText">
+            New to NOVA+?
+            <a onclick="toggleAccount()">Create Account</a>
+        </p>
+
+        <button class="secondary" onclick="showHome()">Back Home</button>
+    </div>
+</section>
+
+<section id="playerPage" class="hidden">
+    <button class="back" onclick="closePlayer()">← Back</button>
+    <div class="player-container">
+        <h2 id="playingTitle"></h2>
+        <video id="videoPlayer" controls playsinline>
+            Your browser does not support video.
+        </video>
+        <p id="playingDescription"></p>
+    </div>
+</section>
+
+<section id="detailsPage" class="hidden">
+    <button class="back" onclick="showHome()">← Back</button>
+    <div class="details-box">
+        <img id="detailImage" src="" alt="Movie poster">
+        <div>
+            <h1 id="detailTitle"></h1>
+            <p id="detailDescription"></p>
+            <p id="detailCategory"></p>
+            <button id="detailPlay">▶ Watch Movie</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="logo">NOVA<span>+</span></div>
+    <p>Entertainment without limits.</p>
+    <p>© 2026 NOVA+. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
